@@ -12,7 +12,8 @@ st.set_page_config(page_title="Kolachi", layout="wide")
 st.title("🏫 Kolachi😋 - AI Assistant🤖")
 
 # API Setup
-HF_TOKEN = "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"
+HF_TOKEN = st.secrets["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"]
+
 MODEL_ID = "meta-llama/Llama-3.2-3B-Instruct"
 hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 
@@ -23,7 +24,7 @@ hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 def load_hotel_knowledge():
     try:
         # یہاں بھی r" " کا استعمال کریں
-        path = r"E:\RajaCCP\HotelData.docx"
+        path = "HotelData.docx"
         if os.path.exists(path):
             return docx2txt.process(path)
         else:
