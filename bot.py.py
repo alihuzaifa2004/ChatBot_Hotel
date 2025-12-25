@@ -12,7 +12,7 @@ st.set_page_config(page_title="Kolachi", layout="wide")
 st.title("🏫 Kolachi😋 - AI Assistant🤖")
 
 # API Setup
-HF_TOKEN = st.secrets["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"]
+HF_TOKEN = st.secrets["HF_TOKEN"]
 
 MODEL_ID = "meta-llama/Llama-3.2-3B-Instruct"
 hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
