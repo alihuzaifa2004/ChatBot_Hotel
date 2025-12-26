@@ -93,9 +93,6 @@ hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 
 ---
 
-
----
-
 ## 👨‍💼 Managed By
 **Kolachi Hotel**  
 AI Assistant supervised by **Raja**
